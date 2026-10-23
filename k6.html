@@ -1,0 +1,9 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>K6: Sự kiện bàn phím</title><link rel="stylesheet" href="style.css"><style>#box{position:absolute;left:50%;top:260px;width:80px;height:80px;margin-left:-40px;background:var(--accent);transition:top .08s}</style></head><body><nav><a href="42.html">Trang chủ</a><a href="tk5.html">TK5</a><a href="tk7.html">TK7</a><a href="tk8.html">TK8</a><a href="k4.html">K4</a><a href="k6.html">K6</a><a href="k8.html">K8</a></nav><main><h1>K6: Sự kiện bàn phím</h1><p>Bấm phím mũi tên LÊN hoặc XUỐNG để di chuyển khối.</p>
+<div id="box"></div>
+<script>
+const box=document.getElementById("box");let top=260;const step=20;
+document.addEventListener("keydown",function(e){
+if(e.key==="ArrowUp")top-=step;else if(e.key==="ArrowDown")top+=step;else return;
+e.preventDefault();top=Math.max(0,Math.min(top,window.innerHeight-box.offsetHeight));box.style.top=top+"px"});
+</script>
+</main></body></html>

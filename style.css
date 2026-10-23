@@ -1,0 +1,20 @@
+:root{--bg:#f4f7f6;--ink:#17252a;--main:#0f4c5c;--accent:#e09f3e;--line:#d5dedc}
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia,"Times New Roman",serif;background:var(--bg);color:var(--ink);line-height:1.6}
+nav{background:var(--main);display:flex;flex-wrap:wrap;gap:4px;padding:8px 16px;position:sticky;top:0}
+nav a{color:#fff;text-decoration:none;padding:6px 12px;font-family:system-ui,sans-serif;font-size:14px;border-radius:4px}
+nav a:hover,nav a:focus-visible,nav a.on{background:var(--accent);color:var(--ink);outline:none}
+main{max-width:680px;margin:0 auto;padding:28px 18px}
+h1{color:var(--main);margin:0 0 4px}
+.info{background:#fff;border-left:5px solid var(--accent);padding:12px 18px;margin:18px 0}
+.info p{margin:2px 0}
+ul.bai{padding:0;list-style:none}
+ul.bai li{border-bottom:1px solid var(--line)}
+ul.bai a{display:block;padding:10px 4px;color:var(--main);text-decoration:none;font-weight:bold}
+ul.bai a:hover{background:#e6eeec}
+ul.bai span{display:block;font-weight:normal;color:#4a5d63;font-size:14px}
+button{background:var(--main);color:#fff;border:0;padding:8px 16px;border-radius:4px;cursor:pointer;font-size:15px}
+button:hover{background:#0b3a47}
+input{padding:7px;border:1px solid var(--line);border-radius:4px;font-size:15px;width:100%}
+label{display:block;margin-top:10px}
+.kq{margin-top:14px;font-weight:bold;font-size:18px}

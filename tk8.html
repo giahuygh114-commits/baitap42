@@ -1,0 +1,11 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TK8: Chuyển Hex sang RGB</title><link rel="stylesheet" href="style.css"></head><body><nav><a href="42.html">Trang chủ</a><a href="tk5.html">TK5</a><a href="tk7.html">TK7</a><a href="tk8.html">TK8</a><a href="k4.html">K4</a><a href="k6.html">K6</a><a href="k8.html">K8</a></nav><main><h1>TK8: Chuyển Hex sang RGB</h1><p>Nhập mã màu Hex, ví dụ #FF0000.</p>
+<label>Mã Hex<input id="hex" value="#FF0000"></label><br><button id="b">Chuyển đổi</button>
+<p class="kq" id="kq"></p><div id="mau" style="height:60px;border:1px solid #ccc"></div>
+<script>
+function hexToRgb(hex){hex=hex.trim().replace("#","");if(hex.length===3)hex=hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+if(!/^[0-9a-fA-F]{6}$/.test(hex))return null;
+return"rgb("+parseInt(hex.substring(0,2),16)+", "+parseInt(hex.substring(2,4),16)+", "+parseInt(hex.substring(4,6),16)+")"}
+document.getElementById("b").onclick=function(){const r=hexToRgb(document.getElementById("hex").value);
+document.getElementById("kq").textContent=r||"Mã Hex không hợp lệ.";document.getElementById("mau").style.background=r||"none"};
+</script>
+</main></body></html>

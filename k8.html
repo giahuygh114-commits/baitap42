@@ -1,0 +1,13 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>K8: Tính chỉ số BMI</title><link rel="stylesheet" href="style.css"></head><body><nav><a href="42.html">Trang chủ</a><a href="tk5.html">TK5</a><a href="tk7.html">TK7</a><a href="tk8.html">TK8</a><a href="k4.html">K4</a><a href="k6.html">K6</a><a href="k8.html">K8</a></nav><main><h1>K8: Tính chỉ số BMI</h1><p>Nhập cân nặng và chiều cao để xem phân loại.</p>
+<label>Cân nặng (kg)<input type="number" id="cn" placeholder="60"></label>
+<label>Chiều cao (m)<input type="number" id="cc" step="0.01" placeholder="1.70"></label><br>
+<button id="b">Tính BMI</button><p class="kq" id="kq"></p>
+<script>
+function tinhBMI(cn,cc){return cn/(cc*cc)}
+function phanLoai(b){if(b<18.5)return"Thiếu cân";if(b<25)return"Bình thường";return"Thừa cân"}
+document.getElementById("b").onclick=function(){
+const cn=parseFloat(document.getElementById("cn").value),cc=parseFloat(document.getElementById("cc").value),kq=document.getElementById("kq");
+if(isNaN(cn)||isNaN(cc)||cn<=0||cc<=0){kq.textContent="Vui lòng nhập số hợp lệ.";return}
+const b=tinhBMI(cn,cc);kq.textContent="BMI: "+b.toFixed(1)+" - "+phanLoai(b)};
+</script>
+</main></body></html>

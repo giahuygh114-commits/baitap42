@@ -1,0 +1,12 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>K4: Phân trang danh sách</title><link rel="stylesheet" href="style.css"><style>#l{list-style:none;padding:0}#l li{background:#fff;padding:8px 12px;border-bottom:1px solid var(--line)}#p button{margin:12px 4px 0 0;background:#fff;color:var(--main);border:1px solid var(--main)}#p button.on{background:var(--main);color:#fff}</style></head><body><nav><a href="42.html">Trang chủ</a><a href="tk5.html">TK5</a><a href="tk7.html">TK7</a><a href="tk8.html">TK8</a><a href="k4.html">K4</a><a href="k6.html">K6</a><a href="k8.html">K8</a></nav><main><h1>K4: Phân trang danh sách</h1><p>50 mục, mỗi trang hiển thị 10 mục.</p>
+<ul id="l"></ul><div id="p"></div>
+<script>
+const items=[];for(let i=1;i<=50;i++)items.push("Mục "+i);
+const per=10,total=Math.ceil(items.length/per);let cur=1;
+function render(){const l=document.getElementById("l");l.innerHTML="";
+items.slice((cur-1)*per,cur*per).forEach(function(t){const li=document.createElement("li");li.textContent=t;l.appendChild(li)});
+const p=document.getElementById("p");p.innerHTML="";
+for(let i=1;i<=total;i++){const b=document.createElement("button");b.textContent=i;if(i===cur)b.className="on";b.onclick=function(){cur=i;render()};p.appendChild(b)}}
+render();
+</script>
+</main></body></html>

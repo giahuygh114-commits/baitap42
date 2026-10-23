@@ -1,0 +1,7 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TK7: Tạo chuỗi ngẫu nhiên</title><link rel="stylesheet" href="style.css"></head><body><nav><a href="42.html">Trang chủ</a><a href="tk5.html">TK5</a><a href="tk7.html">TK7</a><a href="tk8.html">TK8</a><a href="k4.html">K4</a><a href="k6.html">K6</a><a href="k8.html">K8</a></nav><main><h1>TK7: Tạo chuỗi ngẫu nhiên</h1><p>Mật khẩu ngẫu nhiên dài 8 ký tự gồm chữ cái thường và số.</p>
+<button id="b">Tạo mật khẩu</button><p class="kq" id="kq"></p>
+<script>
+function taoMatKhau(doDai=8){const k="abcdefghijklmnopqrstuvwxyz0123456789";let r="";for(let i=0;i<doDai;i++){r+=k[Math.floor(Math.random()*k.length)]}return r}
+document.getElementById("b").onclick=function(){document.getElementById("kq").textContent=taoMatKhau()};
+</script>
+</main></body></html>
